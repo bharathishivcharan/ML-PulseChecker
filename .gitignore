@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Mac OS
+.DS_Store
+
+# IDE
+.vscode/
+
+#Dataset
+data/raw/product_events.csv

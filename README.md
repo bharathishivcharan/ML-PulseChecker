@@ -1,6 +1,7 @@
 # ML-PulseChecker  
 ### A Production-Style Churn Prediction System (FastAPI + Docker)
 
+![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white)
 ---
 
 ## Why I Built This

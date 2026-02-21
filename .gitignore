@@ -18,3 +18,7 @@ env/
 
 #Dataset
 data/raw/product_events.csv
+
+#Models
+models/
+

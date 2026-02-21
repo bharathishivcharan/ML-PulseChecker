@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import joblib
 import pandas as pd
+import os
 
 # Load model
 model = joblib.load("models/churn_model.pkl")
@@ -27,3 +28,14 @@ def predict_churn(user: UserFeatures):
     data = pd.DataFrame([user.dict()])
     proba = model.predict_proba(data[FEATURES])[:,1][0]
     return {"churn_probability": round(float(proba), 4)}
+
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
+
+@app.post("/predict")
+def predict(features: dict):
+    import pandas as pd
+    df = pd.DataFrame([features])
+    proba = model.predict_proba(df)[0][1]
+    return {"churn_probability": float(proba)}

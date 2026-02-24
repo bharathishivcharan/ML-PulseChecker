@@ -183,7 +183,7 @@ Feature importance helps interpret which behavioral signals contribute most to c
 
 ### Calibration Curve
 
-![Calibaration Curve](assets/calibration_cruve.png)
+![Calibaration Curve](assets/calibration_curve.png)
 
 Calibration curve visualizes how well predicted probabilities match the actual outcomes.
 

@@ -217,5 +217,4 @@ The system monitors for data drift between training and production data, saving 
 - Docker
 - Evidently AI
 
-## Summary
 ---

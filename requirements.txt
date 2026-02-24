@@ -1,7 +1,23 @@
-pandas==2.2.2
-numpy==1.26.4
-scikit-learn==1.4.2
-fastapi==0.110.0
-uvicorn==0.29.0
-joblib==1.4.2
-matplotlib==3.8.4
+# Core Python packages
+numpy>=1.24
+pandas>=2.3
+scipy>=1.17
+scikit-learn>=1.8
+matplotlib>=3.10
+seaborn>=0.13
+joblib>=1.5
+
+# Machine learning models
+xgboost>=3.2
+imbalanced-learn>=0.14
+shap>=0.50
+
+# Web API
+fastapi>=0.129
+uvicorn>=0.41
+
+# Data drift / monitoring
+evidently==0.7.20
+
+# Utilities
+python-dotenv>=1.2

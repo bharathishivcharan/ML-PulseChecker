@@ -181,6 +181,25 @@ The ROC curve illustrates the tradeoff between True Positive Rate and False Posi
 
 Feature importance helps interpret which behavioral signals contribute most to churn prediction.
 
+### Calibration Curve
+
+![Calibaration Curve](assets/calibration_cruve.png)
+
+Calibration curve visualizes how well predicted probabilities match the actual outcomes.
+
+### SHAP Summary
+
+![Calibaration Curve](assets/shap_summary.png)
+
+SHAP values provide a global feature explanation showing which features drive model predictions.
+
+### Evidently AI Drift Report
+The system monitors for data drift between training and production data, saving reports in ```assets/data_drift_report.json```. This ensures the model remains reliable as user behavior changes over time.
+
+### Data Drift Snapshot
+
+![Total Sessions Drift](assets/data_drift_total_sessions.png)
+
 ## Engineering Choices
 
 - Chose a tree-based model for interpretability and robustness.
@@ -189,4 +208,14 @@ Feature importance helps interpret which behavioral signals contribute most to c
 - Containerized the application for reproducibility.
 - Excluded model artifacts from version control as best practice.
 
+## Tech Stack
+
+- Python 3.12+
+- pandas, numpy, scikit-learn, xgboost, imbalanced-learn, shap
+- matplotlib 
+- FastAPI + Uvicorn 
+- Docker
+- Evidently AI
+
+## Summary
 ---

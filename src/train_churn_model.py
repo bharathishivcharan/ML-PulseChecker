@@ -67,6 +67,15 @@ os.makedirs("assets", exist_ok=True)
 with open("assets/data_drift_report.json", "w") as f:
     f.write(drift_result.json())
 
+    #For the Snapshot for Data Drift
+plt.hist(train_df["total_sessions"], bins=20, alpha=0.5, label="train")
+plt.hist(prod_df["total_sessions"], bins=20, alpha=0.5, label="prod")
+plt.title("Total Sessions Distribution (Train vs Production)")
+plt.xlabel("Total Sessions")
+plt.ylabel("Count")
+plt.legend()
+plt.savefig("assets/data_drift_total_sessions.png")
+plt.close()
 print("Data drift results saved to assets/data_drift_report.json")
 
 #Random forest
